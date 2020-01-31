@@ -1,0 +1,44 @@
+<!-- 
+- nos permite executar scripts interpretados.
+- renderização, por a chamada em baixo no script.
+- trabalha com a árvore de elementis em tela, a DOM.
+- no JS não há tipagem estática. 
+- === se valor e tipos  são iguais. 
+- DOM elementos em tela, tudo que o js pode manipular.
+ -->
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> JS Skylab </title>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" name="nome"/>
+            <input type="text" name="nome2"/>
+            <button class="button"> Adicionar </button>
+        </div>
+        
+        <script>
+            var inputElement = document.getElementById('nome');
+            var inputElement = document.getElementsByTagName('input')[0];
+            var inputElement = document.getElementsByClassName('button')[0];
+            var inputElement = document.querySelector('body div#app input');
+            var inputElement = document.querySelector('input[name=nome]');
+            var inputElement = document.querySelectorAll('input');
+
+            var btnElement = document.querySelector('button.button');
+            var inputElement = document.querySelector('input[name=nome]')
+
+
+            btnElement.onclick = function() {
+                var text = inputElement.value;
+                alert(text);
+            }
+
+
+
+        </script>
+    </body>
+
+</html>
