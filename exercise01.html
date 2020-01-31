@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> JS Skylab </title>
+    </head>
+    <body>
+        <div id="app">
+           <button class="btn"> Criar </button>
+        </div>
+        
+        <script>
+           var btnElement = document.querySelector('.btn');
+
+            btnElement.onclick = function() {
+               newDiv = document.createElement('div');
+               newDiv.style.width = 100;
+               newDiv.style.height = 100;
+               newDiv.style.background = "#8300b3";
+               console.log(newDiv);
+
+               container = document.querySelector('#app');
+
+               container.appendChild(newDiv);
+           }
+        </script>
+    </body>
+
+</html>
