@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> JS Skylab </title>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" name="nome"/>
+            <button class="button"> Adicionar </button>
+        </div>
+        
+        <script>
+           var linkElement = document.createElement('a');
+           linkElement.setAttribute('href', 'www.omelete.com.br');
+           linkElement.setAttribute('title', 'Um site de cultura pop');
+
+            var textElement =  document.createTextNode('Acessar página:');
+            linkElement.appendChild(textElement);
+
+            var containerElement = document.querySelector('#app');
+            containerElement.appendChild(linkElement);
+
+            containerElement.removeChild(inputElement);
+        </script>
+    </body>
+
+</html>
