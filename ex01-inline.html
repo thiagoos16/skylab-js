@@ -1,0 +1,37 @@
+<!-- 
+- nos permite executar scripts interpretados.
+- renderização, por a chamada em baixo no script.
+- trabalha com a árvore de elementis em tela, a DOM.
+- no JS não há tipagem estática. 
+- === se valor e tipos  são iguais. 
+- DOM elementos em tela, tudo que o js pode manipular.
+ -->
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> JS Skylab </title>
+    </head>
+    <body>
+        <div id="app">
+            <button onclick="mostraAlerta()"> Press me </button>
+            <button onmouseover="mostraAlertaOver()"> Over me </button>
+            <input onkeypress="mostraAlertaDown()"/>
+        </div>
+        
+        <script>
+            function mostraAlerta() {
+                alert("Botão foi clicado");
+            }
+
+            function mostraAlertaOver() {
+                alert("Alguém passou em cima do botão");
+            }
+
+            function mostraAlertaDown() {
+                alert("Alguém inseriu nele.");
+            }
+        </script>
+    </body>
+
+</html>
