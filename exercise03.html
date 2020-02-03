@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> JS Skylab </title>
+    </head>
+    <body>
+        <div id="app">
+            <button class="btn"> Criar </button>
+            <ul>
+            </ul>
+        </div>
+        
+        <script>
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+
+            var btnElement = document.querySelector('.btn');
+
+            btnElement.onclick = function() {
+                nomes.forEach(nome => {
+                    newLi = document.createElement('li');
+                    newLiText = document.createTextNode(nome);
+                    
+                    newLi.appendChild(newLiText);
+                
+                    container_ul = document.querySelector('#app ul');
+
+                    container_ul.appendChild(newLi); 
+                });
+            }
+        </script>
+    </body>
+
+</html>
