@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> JS Skylab </title>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" name="nome">
+            <button class="btn" onClick="adicionar()"> Adicionar </button>
+            <ul>
+            </ul>
+        </div>
+        
+        <script>
+            function adicionar() {
+                var new_name = document.querySelector('input[name=nome]');
+                
+                new_li = document.createElement('li');
+                new_li_text = document.createTextNode(new_name.value);
+                new_li.appendChild(new_li_text);
+
+                container_ul = document.querySelector('#app ul');
+                container_ul.appendChild(new_li);
+                
+                new_name.value = "";
+            }
+        </script>
+    </body>
+
+</html>
