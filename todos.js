@@ -1,15 +1,11 @@
 var list = document.querySelector('#app ul');
 
-var todos = [
-    'Criar logo da lojinha',
-    'Criar template para posts no insta',
-    'Atualizar insta com o design'
-];
+var todos = JSON.parse(localStorage.getItem('list_todos')) || [];
 
 function renderTodos() {
     list.innerHTML = ""; 
 
-    todos.forEach(todo => {
+    for (todo of todos) {
         var new_item = document.createElement('li');
         var content_item = document.createTextNode(todo);
 
@@ -26,14 +22,17 @@ function renderTodos() {
         new_item.appendChild(btn_excluir);
         
         list.appendChild(new_item);
-    });
+    };
 }
+
+renderTodos();
 
 function adicionar() {
     var input = document.querySelector('input[name=nome]');
 
     todos.push(input.value);
     renderTodos();
+    saveToStorage();
 
     input.value = "";
 }
@@ -41,6 +40,9 @@ function adicionar() {
 function deleteTodo(pos) {
     todos.splice(pos, 1);
     renderTodos();
+    saveToStorage();
 }
 
-renderTodos();
+function saveToStorage() {
+    localStorage.setItem('list_todos', JSON.stringify(todos));
+}
