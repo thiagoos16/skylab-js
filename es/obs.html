@@ -35,4 +35,9 @@ ES - ECMAScript
     o código que será interpretado por qualquer navegador, mas o nosso
     código se mantém sempre simples. Se eu estivesse fazendo um script em node,
     não precisaria do babel, pois o node já transpila isso por default.
-    
+
+*Em uma herança, a classe que herda, no constructor é bom chamar o super() da classe pai.
+
+    class List { constructor() { } same(data) { } }
+
+    class MyList extends List { constructor() { super(); } sameMore() { } }
