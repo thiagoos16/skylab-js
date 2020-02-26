@@ -17,7 +17,22 @@ ES - ECMAScript
 *Preset-Env
     - ele vai converter o código dfa melhor forma possível para o browser.
 
-*Comandos especiais:
+*Comandos essencias:
     - yarn init
-    - 
-
+    - o package.json vai referenciar as dependências de nossa aplicação.
+    - yarn add @babel/cli: ativa a interface de linha de comando do babel.
+    - yarn add @babel/preset-env: percebe onde a aplicação está sendo executada, tipo o node já tem isso por default 
+    - yarn add @babel/core
+    -.babelrc : aqui ele transpila
+      {
+          "presets": ["@babel/preset-env"]
+      }
+    - no package.json: add comandos para executar no navegador
+        "scripts": {
+            "dev": "babel ./main.js -o ./bundle.js -w"
+        }
+    - no package.json cria-se o buddle.js que é onde vai estar
+    o código que será interpretado por qualquer navegador, mas o nosso
+    código se mantém sempre simples. Se eu estivesse fazendo um script em node,
+    não precisaria do babel, pois o node já transpila isso por default.
+    
