@@ -29,7 +29,7 @@ document.querySelector('#add').onclick = function () {
 
 MyList.showUser();
 
-//****************************************************************//
+//*****************************static function***********************************//
 
 class TodoList {
     constructor() {
@@ -51,6 +51,23 @@ class Matematica {
 }
 
 console.log(Matematica);
+
+//*******************************Const and let************************************//
+function teste(x) {
+    let y = 2;
+
+    if (x > 5) {
+        let y = 4; // com o let eu posso reatribuir valores dentro de escopos
+        console.log(x, y);
+    }
+}
+
+console.log(y); // y está fora desse escopo, então vai acusar erro
+
+teste(10);
+
+//***************************************************************//
+
 
 
 
