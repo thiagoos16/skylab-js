@@ -28,3 +28,30 @@ document.querySelector('#add').onclick = function () {
 }
 
 MyList.showUser();
+
+//****************************************************************//
+
+class TodoList {
+    constructor() {
+        this.todo = [];
+    }
+
+    static addTodo() {
+        this.todos.push('new todo');
+        console.log(this.todo);
+    }
+}
+
+TodoList.addTodo(); // vai dar erro
+
+class Matematica {
+    static soma(a, b) {
+        return a + b;
+    }
+}
+
+console.log(Matematica);
+
+
+
+
