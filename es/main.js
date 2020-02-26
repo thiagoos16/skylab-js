@@ -92,3 +92,32 @@ const finded =  arr.find(function(item) {
 });
 console.log('FINDED result: ');
 console.log(finded);
+
+/***************************Arrows Functions****************************/
+const newArr =  arr.map(function(item) {
+    return item * 2; 
+});
+
+const newArrA =  arr.map((item) => {
+    return item * 2; 
+});
+
+const newArrB =  arr.map(item => {
+    return item * 2; 
+});
+
+const newArrC =  arr.map(item => item * 2);
+
+const teste1 = () => {
+    return 'teste';
+}
+
+const teste2 = () => [1,2,3];
+
+const teste3 = () => ({ nome : 'Diego'});
+
+// ****************************
+
+
+
+
