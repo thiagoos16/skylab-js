@@ -66,9 +66,29 @@ console.log(y); // y está fora desse escopo, então vai acusar erro
 
 teste(10);
 
-//***************************************************************//
+//******************************arrays*********************************//
+const arr = [1,2,3,4,5,8,10];
 
+const newArr = arr.map(function(item, index) {
+    return item * index;
+});
+console.log('MAP result: ');
+console.log(newArr);
 
+const sum = arr.reduce(function(total, next) {
+    return total + next;
+});
+console.log('REDUCE result: ');
+console.log(sum);
 
+const filtered = arr.filter(function(item) {
+    return item % 2 === 0;
+});
+console.log('FILTER result: ');
+console.log(filtered);
 
-
+const finded =  arr.find(function(item) {
+    return item === 4;
+});
+console.log('FINDED result: ');
+console.log(finded);

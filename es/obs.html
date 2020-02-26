@@ -52,4 +52,19 @@ ES - ECMAScript
     console.log(user);    
 
 *let utilizada para variáveis de escopo'{}'
- 
+
+*****Arrays:
+1. Map: percorre o vetor e retorna uma informação válida.
+const array = arr.map(function(item, index) {
+    return item + index;
+});
+
+2. Reduce: consumir todo vetor e trasnformar em um único valor.
+const soma = arr.reduce(function(total, next)) {
+    return total + next;
+}
+
+3. Filter: percorre um array validando uma condição.
+const filtered = arr.filter(function(item) {
+    return item % 2 = 0;
+})
