@@ -18,9 +18,7 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-var List =
-/*#__PURE__*/
-function () {
+var List = /*#__PURE__*/function () {
   function List() {
     _classCallCheck(this, List);
 
@@ -38,9 +36,7 @@ function () {
   return List;
 }();
 
-var TodoList =
-/*#__PURE__*/
-function (_List) {
+var TodoList = /*#__PURE__*/function (_List) {
   _inherits(TodoList, _List);
 
   function TodoList() {
@@ -69,4 +65,127 @@ document.querySelector('#add').onclick = function () {
   MyList.add("new item");
 };
 
-MyList.showUser();
+MyList.showUser(); //*****************************static function***********************************//
+
+var TodoList2 = /*#__PURE__*/function () {
+  function TodoList2() {
+    _classCallCheck(this, TodoList2);
+
+    this.todo = [];
+  }
+
+  _createClass(TodoList2, null, [{
+    key: "addTodo",
+    value: function addTodo() {
+      this.todo.push('new todo');
+      console.log(this.todo);
+    }
+  }]);
+
+  return TodoList2;
+}(); // TodoList2.addTodo(); // vai dar erro
+
+
+var Matematica = /*#__PURE__*/function () {
+  function Matematica() {
+    _classCallCheck(this, Matematica);
+  }
+
+  _createClass(Matematica, null, [{
+    key: "soma",
+    value: function soma(a, b) {
+      return a + b;
+    }
+  }]);
+
+  return Matematica;
+}();
+
+console.log(Matematica.soma(1, 2)); //*******************************Const and let************************************//
+
+function teste(x) {
+  var y = 2;
+
+  if (x > 5) {
+    var _y = 4; // com o let eu posso reatribuir valores dentro de escopos
+
+    console.log(x, _y);
+  }
+} // console.log(y); // y está fora desse escopo, então vai acusar erro
+
+
+teste(10); //******************************arrays*********************************//
+
+var arr = [1, 2, 3, 4, 5, 8, 10];
+var newArr = arr.map(function (item, index) {
+  return item * index;
+});
+console.log('MAP result: ');
+console.log(newArr);
+var sum = arr.reduce(function (total, next) {
+  return total + next;
+});
+console.log('REDUCE result: ');
+console.log(sum);
+var filtered = arr.filter(function (item) {
+  return item % 2 === 0;
+});
+console.log('FILTER result: ');
+console.log(filtered);
+var finded = arr.find(function (item) {
+  return item === 4;
+});
+console.log('FINDED result: ');
+console.log(finded);
+/***************************Arrows Functions****************************/
+
+var newArrZ = arr.map(function (item) {
+  return item * 2;
+});
+var newArrA = arr.map(function (item) {
+  return item * 2;
+});
+var newArrB = arr.map(function (item) {
+  return item * 2;
+});
+var newArrC = arr.map(function (item) {
+  return item * 2;
+});
+
+var teste1 = function teste1() {
+  return 'teste';
+};
+
+var teste2 = function teste2() {
+  return [1, 2, 3];
+};
+
+var teste3 = function teste3() {
+  return {
+    nome: 'Diego'
+  };
+};
+/****************************Desestruturação*************************/
+
+
+var user = {
+  name: 'Thiago',
+  age: 26,
+  address: {
+    city: 'Manaus',
+    state: 'AM'
+  }
+};
+var name = user.name,
+    age = user.age,
+    city = user.address.city;
+console.log(name);
+console.log(age);
+
+function showName(_ref) {
+  var name = _ref.name,
+      city = _ref.address.city;
+  console.log(name, city);
+}
+
+showName(user);

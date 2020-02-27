@@ -31,18 +31,18 @@ MyList.showUser();
 
 //*****************************static function***********************************//
 
-class TodoList {
+class TodoList2 {
     constructor() {
         this.todo = [];
     }
 
     static addTodo() {
-        this.todos.push('new todo');
+        this.todo.push('new todo');
         console.log(this.todo);
     }
 }
 
-TodoList.addTodo(); // vai dar erro
+// TodoList2.addTodo(); // vai dar erro
 
 class Matematica {
     static soma(a, b) {
@@ -50,7 +50,7 @@ class Matematica {
     }
 }
 
-console.log(Matematica);
+console.log(Matematica.soma(1,2));
 
 //*******************************Const and let************************************//
 function teste(x) {
@@ -62,7 +62,7 @@ function teste(x) {
     }
 }
 
-console.log(y); // y está fora desse escopo, então vai acusar erro
+// console.log(y); // y está fora desse escopo, então vai acusar erro
 
 teste(10);
 
@@ -94,7 +94,7 @@ console.log('FINDED result: ');
 console.log(finded);
 
 /***************************Arrows Functions****************************/
-const newArr =  arr.map(function(item) {
+const newArrZ =  arr.map(function(item) {
     return item * 2; 
 });
 
@@ -116,8 +116,26 @@ const teste2 = () => [1,2,3];
 
 const teste3 = () => ({ nome : 'Diego'});
 
-// ****************************
+/****************************Desestruturação*************************/
+const user = {
+    name: 'Thiago',
+    age: 26,
+    address: {
+        city: 'Manaus',
+        state: 'AM'
+    }
+};
 
+const { name, age, address: { city } } = user;
+
+console.log(name);
+console.log(age);
+
+function showName({ name, address: { city } }) {
+    console.log(name, city);
+}
+
+showName(user);
 
 
 
