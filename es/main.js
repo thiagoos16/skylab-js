@@ -137,5 +137,52 @@ function showName({ name, address: { city } }) {
 
 showName(user);
 
+/****************************rest/spread*************************/
+const spawn = {
+    nome: 'Thiago',
+    age: 26,
+    company: 'CESAR'
+};
 
+const { nome, ...resto } = spawn;
 
+console.log(nome);
+console.log(resto);
+
+const nums = [1,2,3,4,5];
+const [a, b, ...c] = nums;
+
+console.log(a);
+console.log(b);
+console.log(c);
+
+/*
+function product(a,b) {
+    return a*b;
+}
+
+console.log(product(1,2));
+*/
+
+// function product(a, b, ...params) 
+function product(...params) {
+    return params.reduce((total, next) => total * next);
+}
+console.log(product(1,2,3));
+
+//SPREAD
+
+const conjA = [1, 2, 3];
+const conjB = [4, 5, 6];
+
+const conjC = [ ...conjA, ...conjB];
+console.log(conjC);
+
+const hellboy = {
+    name: 'Thiago',
+    age: 26,
+    company: 'CESAR'
+};
+
+const hero = { ...hellboy, name: 'Anung Un Rama'};
+console.log(hero);
