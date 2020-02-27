@@ -254,4 +254,15 @@ var hero = _objectSpread({}, hellboy, {
   name: 'Anung Un Rama'
 });
 
-console.log(hero);
+console.log(hero); // *****************************Template Literals**************************
+
+console.log("My name is ".concat(user.name, " and have ").concat(user.age, " years old.")); //**************************Object Short Syntex***************************/
+
+var nameB = 'Antony';
+var ageB = 26;
+var userB = {
+  nameB: nameB,
+  ageB: ageB,
+  company: 'Méliuz'
+};
+console.log(userB);

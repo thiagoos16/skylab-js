@@ -186,3 +186,17 @@ const hellboy = {
 
 const hero = { ...hellboy, name: 'Anung Un Rama'};
 console.log(hero);
+
+// *****************************Template Literals**************************
+console.log(`My name is ${user.name} and have ${user.age} years old.`);
+
+//**************************Object Short Syntex***************************/
+const nameB = 'Antony';
+const ageB = 26;
+
+const userB = {
+    nameB,
+    ageB,
+    company: 'Méliuz'
+};
+console.log(userB);
