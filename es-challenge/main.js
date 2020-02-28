@@ -49,3 +49,30 @@ const usersAux = userArr.map(item => ({...item, idade: item.idade * 2}));
 console.log(usersAux);
 const userAux2 = usersAux.filter(item => item.idade <= 50);
 console.log(userAux2);
+
+//*****************Arrow Functions******************//
+const arr = [1, 2, 3, 4, 5];
+// arr.map(function(item) {
+//  return item + 10;
+// });
+const arrA = arr.map(item => item + 10);
+console.log(arrA);
+//****end
+
+const usuario = { nome: 'Diego', idade: 23 };
+// function mostraIdade(usuario) {
+//  return usuario.idade;
+// }
+const mostraIdade = usuario => usuario.idade;
+console.log(mostraIdade(usuario));
+//****end
+
+const nome = "Diego";
+const idade = 23;
+// function mostraUsuario(nome = 'Diego', idade = 18) {
+//  return { nome, idade };
+// }
+const mostraUsuario = (nome = "Thiago", idade = 19) => ({nome, idade});
+console.log(mostraUsuario(nome, idade));
+console.log(mostraUsuario());
+//****end
