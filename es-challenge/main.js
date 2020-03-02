@@ -76,3 +76,60 @@ const mostraUsuario = (nome = "Thiago", idade = 19) => ({nome, idade});
 console.log(mostraUsuario(nome, idade));
 console.log(mostraUsuario());
 //****end
+
+//********************Desestruturação*********/
+const empresa = {
+    nome2: 'Rocketseat',
+    endereco: {
+        cidade: 'Rio do Sul',
+        estado: 'SC',
+    }
+};
+
+const {nome2, endereco: {cidade, estado}} = empresa;
+console.log(nome); // Rocketseat
+console.log(cidade); // Rio do Sul
+console.log(estado); // SC
+//****end
+
+const user05 = {
+    nome: 'Thiago',
+    idade: '31'
+};
+
+function mostraInfo({nome, idade}) {
+    return `${nome} tem ${idade} anos.`;
+}
+
+console.log(mostraInfo(user05));
+//****end
+
+/****************Rest-Spread********/
+const arr1 = [1, 2, 3, 4, 5, 6];
+const [x1, ...y1] = arr1;
+console.log(x1);
+console.log(y1);
+//****end
+
+function soma(...params) {
+    return params.reduce((total, next) => total + next);
+}
+console.log(soma(1,2,3,4,5,6));
+//****end
+
+const userSpread = {
+        nome: 'Diego',
+        idade: 23,
+        endereco: {
+            cidade: 'Rio do Sul',
+            uf: 'SC',
+            pais: 'Brasil',
+        }   
+};
+
+const usuario02 = {...userSpread, nome:'Momo'}
+console.log(usuario02);
+
+const usuario03 = {...userSpread, endereco: {cidade: 'lontras', uf: 'SC', pais: 'Brasil'}};
+console.log(usuario03);
+//****end
