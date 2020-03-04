@@ -77,6 +77,7 @@ const filtered = arr.filter(function(item) {
 
 
  ************webpack:
+ - Import e export;
  Serviço que disponibiliza utilizar vários scripts js de uma vez, convertidos em um único bundle.js
     -   yarn add webpack webpack-cli -D[add no package.json devDependencies];
     -   webpack.config.js
@@ -86,3 +87,18 @@ const filtered = arr.filter(function(item) {
         "scripts": {
             "dev": "webpack --mode=development -w"
         }
+
+*************webpack dev-server:
+    - no webpack.config.js:
+        devServer: {
+            contentBase:__dirname + '/public'
+        }
+        aqui vc diz o caminho para onde o servdor deve ser aberto.
+
+    - no packge.json:
+        "scripts": {
+            "dev": "webpack-dev-server --mode=development"
+        }
+
+    - webpack dev-server inbute o conteúdo do bundle.js no index.html
+    - ele atualiza no browser as alterações no script em tempo real.
