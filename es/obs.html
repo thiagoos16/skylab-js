@@ -74,3 +74,15 @@ const filtered = arr.filter(function(item) {
 
 *************Operadores rest/spread
  - yarn add @babel/plugin-proposal-object-rest-spread
+
+
+ ************webpack:
+ Serviço que disponibiliza utilizar vários scripts js de uma vez, convertidos em um único bundle.js
+    -   yarn add webpack webpack-cli -D[add no package.json devDependencies];
+    -   webpack.config.js
+    -   yarn add babel-loader -D
+
+    - no package.json: 
+        "scripts": {
+            "dev": "webpack --mode=development -w"
+        }
