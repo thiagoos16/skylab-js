@@ -1,5 +1,5 @@
 class App {
-    construtor() {
+    constructor() {
         this.repositories = [];
 
         this.formEl = document.getElementById('repo-form');
@@ -25,4 +25,4 @@ class App {
     }
 }
 
-new App();
+const MyApp = new App();
