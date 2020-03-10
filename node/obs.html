@@ -16,3 +16,9 @@
 - docker run --name mongodb -p 27017:27017 -d mongo
 
 - mongoose é um orm de bancos não relacionais com mongodb, encapsula a lógica do banco de dados atráves de códigos próprios
+
+- o app.use, esse use é como um coringa, ele vai aceitar qulquer tipo de requisição;
+
+- const requireDir = require("require-dir");
+// require('./src/models/Product');
+requireDir("./src/models");
