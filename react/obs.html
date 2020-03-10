@@ -1,0 +1,30 @@
+- frontend
+- não é uma lib que faz mais que o js puro, faz o que o js faz de uma forma organizada
+é uma lib para a gente manipular a DOM.
+- muito utilizada para SPA
+- comum é consumir 100% os dados da api, pois não é comum o back enviar os dados 
+em um html formatad, consome os dados do back e monta a tela como desejado.
+- muito mais fácil de manipular
+- quase todo componente vai ser em formato de classe
+- usa jsx[incluir código js no html].
+
+***criação
+npm install --global create-react-app
+create-react-app huntweb
+
+******
+- index.js é de onde se inicia minha aplicação.
+-> React serve para o jcx funcionar.
+-> ReactDOM.render só é chamada uma única vez que é no index, chama o componente App 
+e renderiza ele dentro de uma div no /public/index.html chamada root.
+-> o react deixa usar o </App> com tal sintaxe, pois ela é uma classe que extend o `component`
+
+******
+componente: conjunto de parte visual html, funcional js e estilização css. Quando
+eu uno esses 3 pontos em um treixo de código eu tenho um componente. Todo componete tem um render() e retorna o jsx
+usa-se className para diferenciar do class do js.
+
+******
+stateless componentes, agente pode criar componentes no react apenas com funções.
+
+
