@@ -1,0 +1,14 @@
+- outra forma de criar componente em react é através de funções:
+
+const App = () => <Routes />
+
+igual à:
+
+class App extends Component {
+    render() {
+        return <Routes />
+    }
+}
+
+- no index.js raiz se agente não passa um arquivo ele busca pelo index.js:
+import App from './src';
