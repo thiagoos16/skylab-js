@@ -27,6 +27,6 @@ const styles = StyleSheet.create({
   box: {
     width: 80,
     height: 80,
-    background: "#ff0000",
+    backgroundColor: "#ff0000",
   }
 });
