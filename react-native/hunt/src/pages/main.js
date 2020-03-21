@@ -1,10 +1,14 @@
 import React, { Component }  from 'react';
 import { View, Text } from 'react-native';
-import apu from '../services/api';
+import api from "../services/api";
 
 export default class Main extends Component {
     static navigationOptions = {
         title: 'JSHunt'
+    };
+
+    state = {
+        docs: []
     };
 
     componentDidMount() {
@@ -16,13 +20,16 @@ export default class Main extends Component {
 
         const { docs } = response.data;
 
-        console.log(docs);
+        this.setState({ docs });
     }
     
     render() {
         return (
             <View> 
                 <Text> Página Main </Text>
+                { this.state.docs.map(product => (
+                    <Text key={product._id}> {product.title} </Text>    
+                ))}
             </View>
         );
     }
